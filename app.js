@@ -46,6 +46,10 @@ app.get('/contact', (req, res, next) => {
   res.render('contact');
 });
 
+app.get('/faq', (req, res, next) => {
+  res.render('faq');
+});
+
 
 app.post('/register', (req, res) => {
   debug(req.body);
