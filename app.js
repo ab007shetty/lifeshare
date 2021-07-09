@@ -28,9 +28,9 @@ app.use(morgan('dev'));
 
 mongoose.connect('mongodb://localhost:27017/bloodbank',{useNewUrlParser: true, useUnifiedTopology: true})
 
-app.use(express.static('public/javascripts'));
-app.use(express.static('public/stylesheets'));
-app.use(express.static('public/images'));
+app.use(express.static('public/js'));
+app.use(express.static('public/css'));
+app.use(express.static('public/img'));
 app.use(express.static('public/json'));
 app.use(cookieParser(KEY));
 
