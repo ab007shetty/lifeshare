@@ -1,3 +1,4 @@
+require('dotenv').config();
 var debug = require('debug')('http');
 var morgan = require('morgan');
 var express = require('express');
@@ -5,7 +6,6 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var app = express();
-
 var mongoose = require('mongoose');
 var userModel = require('./models/user');
 
@@ -20,7 +20,7 @@ const escapeRegExp = (string) => {
 
 app.use(morgan('dev'));
 
-mongoose.connect('mongodb://localhost:27017/btest',{useNewUrlParser: true, useUnifiedTopology: true})
+	mongoose.connect('mongodb://localhost:27017/btest',{useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(express.static('public/js'));
 app.use(express.static('public/css'));
@@ -74,6 +74,42 @@ app.post('/register', (req, res) => {
     .catch((err) => {
       res.send(err.message);
     });
+});
+
+app.get('/bank', (req, res) => {
+  if (req.query.blood == undefined || req.query.blood == '')
+    req.query.blood = '(A|B|O|AB)';
+
+  if (req.query.rh != undefined) req.query.blood += escapeRegExp(req.query.rh);
+  else req.query.blood += '[\\+-]';
+
+  if (req.query.city == undefined) req.query.city = '';
+
+  var page = req.query.page;
+  if (page === undefined || page < 1) page = 1;
+
+  var query = {
+    $and: [
+      { bloodGroup: { $regex: req.query.blood, $options: 'i' } },
+      { city: { $regex: req.query.city, $options: 'i' } },
+    ],
+  };
+
+  userModel.find(
+    query,
+    null,
+    {
+      sort: {
+        amount: -1,
+      },
+      limit: 18,
+      skip: (page - 1) * 18,
+    },
+    function (err, docs) {
+      if (err) res.send(err);
+      res.render('bank', { docs: docs, logged: req.signedCookies.user });
+    }
+  );
 });
 
 
