@@ -1,21 +1,15 @@
-var createError = require('http-errors');
+var debug = require('debug')('http');
+var morgan = require('morgan');
 var express = require('express');
+var bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-require('dotenv').config();
-var debug = require('debug')('http');
-var bodyParser = require('body-parser');
-var morgan = require('morgan');
-
 var app = express();
 
 var mongoose = require('mongoose');
 var userModel = require('./models/user');
 
-const KEY = process.env.KEY;
-const dburi = process.env.DBURI;
+const KEY = 'ForOnceTryToBeOriginal';
 const signature = {
   signed: KEY,
   maxAge: 2 * 24 * 60 * 60 * 1000,
@@ -26,18 +20,14 @@ const escapeRegExp = (string) => {
 
 app.use(morgan('dev'));
 
-mongoose.connect('mongodb://localhost:27017/bloodbank',{useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost:27017/btest',{useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(express.static('public/js'));
 app.use(express.static('public/css'));
 app.use(express.static('public/img'));
 app.use(express.static('public/json'));
 app.use(cookieParser(KEY));
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
@@ -45,15 +35,47 @@ app.use(
   })
 );
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+// Get Index Page Request
+app.get ('/', (req, res) => {
+    res.render('index');
 });
+
+app.get('/contact', (req, res, next) => {
+  res.render('contact');
+});
+
+
+app.post('/register', (req, res) => {
+  debug(req.body);
+  userModel
+    .findOne({ phone: req.body.phone })
+    .then((user) => {
+      if (user == null) {
+        new userModel({
+          name: req.body.name.toUpperCase(),
+          bloodGroup: req.body.blood.toUpperCase() + req.body.rh,
+          city: req.body.city.toUpperCase(),
+          phone: req.body.phone,
+          address: req.body.address,
+        })
+          .save()
+          .then((user) => {
+            res.cookie('user', user.phone, signature);
+            res.redirect('/bank');
+          })
+          .catch((err) => {
+            res.send(err.message + '\nPlease go Back and try again.');
+          });
+      } else {
+        res.cookie('user', user.phone, signature);
+        res.redirect('/bank');
+      }
+    })
+    .catch((err) => {
+      res.send(err.message);
+    });
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

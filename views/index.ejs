@@ -18,8 +18,8 @@
 	
 	<link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css "/>
 	
-	<link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="/img/blood.png" />
+	<link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="blood.png" />
 
     <title>Blood Bank</title>
   </head>
@@ -36,41 +36,39 @@
           <span class="navbar-toggler-icon"> </span>
         </button>
         <a class="navbar-brand" href="#"
-          ><img src="img/blood.png" height="30" width="41" alt=""
+          ><img src="blood.png" height="30" width="41" alt=""
         /></a>
         <div class="collapse navbar-collapse" id="Navbar">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="/"
                 ><span class="fa fa-home fa-lg"></span> Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./aboutus.html"
+              <a class="nav-link" href="/about"
                 ><span class="fa fa-info fa-lg"></span> About</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="/"
                 ><span class="fa fa-users fa-lg"></span> Donor</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contact.html"
+              <a class="nav-link" href="/contact"
                 ><span class="fa fa-address-card fa-lg"></span> Contact</a
               >
             </li>
           </ul>
           <span class="navbar-text">
-            <a class="nav-link" href="/register"
-                ><span class="fa fa-address-card fa-lg"></span> Register</a
-              >
+            <a data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span>Register
+            </a>
           </span>
         </div>
       </div>
     </nav>
-
-
 
     <header class="jumbotron">
       <div class="container">
@@ -93,7 +91,7 @@
     
           </div>
           <div class="col-12 col-sm-3 offset-sm-2 align-self-center">
-            <img src="img/blood.png" class="img-fluid" alt="" />
+            <img src="blood.png" class="img-fluid" alt="" />
           </div>
         </div>
       </div>
@@ -239,10 +237,7 @@
               </div>
             </div>
           </div>
-         
-
-         
-        
+              
         </div>
       </div>
     </div>
@@ -308,6 +303,94 @@
         
       </div>
     </footer>
+	
+	     <!-- MODALS HERE -->
+
+	<div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Register</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body bg-info">
+		  
+		<form class="col s12 l5 white-text" action="/register" method="POST" autocomplete="new-password">
+            <div class="form-group row">
+			<label for="firstname" class="col-md-2 col-form-label text-white">Full Name</label>
+            <div class="col-md-10">
+              <input autocomplete="new-password" class="form-control" required placeholder="Name" id="first_name"
+				name="name" type="text" class="validate">
+              </div>
+            </div>
+			
+            <div class="form-group row">
+			<label for="firstname" class="col-md-2 col-form-label text-white" for="blood">Blood Group</label>
+              <div class="col-md-10">
+               <select name="blood" id="blood" class="validate form-control" required>
+							<option value="">Select</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="O">O</option>
+							<option value="AB">AB</option>
+				</select>
+              </div>
+            </div>
+			
+            <div class="form-group row">
+				<label for="firstname" class="col-md-2 col-form-label text-white" for="rh">RH Factor</label>
+              <div class="col-3">
+               <label>
+				<input class="  form-control" value="+" name="rh" type="radio" required />
+			<span class="text-white">Positive</span>
+			</label>
+              </div>
+			  
+              <div class="col-3">
+                <label>
+				<input class=" form-control" value="-" name="rh" type="radio" required />
+				<span class="text-white">Negetive</span>
+				</label>
+              </div>
+            </div>
+			
+            <div class="form-group row">
+			<label class="col-md-2 col-form-label text-white">Phone</label>
+              <div class="col-md-10">
+               <input autocomplete="new-password" class="white-text form-control" required placeholder="Contact Number" id="phone"
+				name="phone" type="text" pattern="[789][0-9]{9}" class="validate">
+              </div>
+            </div>
+			
+			 <div class="form-group row">
+				<label class="col-md-2 col-form-label text-white" for="city">City</label>
+              <div class="col-md-10">
+               <input type="text" name="city" id="city" class="validate form-control" required placeholder="District ">					
+              </div>
+            </div>
+			
+			 <div class="form-group row">
+				<label for="address" class="col-md-2 col-form-label text-white">Address</label>
+              <div class="col-md-10">
+               <textarea autocomplete="new-password" maxlength="80" id="address" placeholder="Enter your Address"
+				name="address" class="materialize-textarea white-text validate form-control" required></textarea>
+              </div>
+            </div>
+							
+            <div class="form-group row">
+              <div class="offset-md-2 col-md-10">				
+               <button class="btn  btn-success form-control" type="submit">Register</button>										
+              </div>
+            </div>
+          </form>
+			
+          </div>
+        </div>
+      </div>
+    </div>
+	
      <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
@@ -323,10 +406,5 @@
 
 	<script src="https://use.fontawesome.com/ee1c3da296.js"></script>
 	
-    <script>
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
   </body>
 </html>
