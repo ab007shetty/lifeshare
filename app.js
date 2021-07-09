@@ -50,6 +50,13 @@ app.get('/faq', (req, res, next) => {
   res.render('faq');
 });
 
+app.get('/guidelines', (req, res, next) => {
+  res.render('guidelines');
+});
+
+app.get('/center', (req, res, next) => {
+  res.render('center');
+});
 
 app.post('/register', (req, res) => {
   debug(req.body);
