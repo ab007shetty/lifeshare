@@ -11,7 +11,7 @@
 }
 
 .footer {
-  background-color: #d1c4e9;
+  background-color: #e27979;
   margin: 0px auto;
   padding: 20px 0px 20px 0px;
 }
@@ -57,4 +57,30 @@ body {
   top: 0;
   left: 0;
   min-height: 300px;
+}
+
+.bg {
+  background-color: #876bd6;
+}
+
+.vg {
+  color: #0f0f0f;
+}
+
+.cg {
+  padding-top: 20px;
+}
+
+h3::first-letter {
+  font-size: 40px;
+  font-family: serif;
+  font-weight: bolder;
+  color: crimson;
+}
+.h3 {
+  font-size: 30;
+}
+
+.tg {
+  background: #e9c8c8;
 }
