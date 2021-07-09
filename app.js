@@ -20,7 +20,9 @@ const escapeRegExp = (string) => {
 
 app.use(morgan('dev'));
 
-	mongoose.connect('mongodb://localhost:27017/btest',{useNewUrlParser: true, useUnifiedTopology: true})
+	mongoose.connect('mongodb+srv://abshetty:xHPl9iJDBtGc8lvQ@eattendance.oxj6e.mongodb.net/bloodbank?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
+
+//	mongoose.connect('mongodb://localhost:27017/bloodbank',{useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(express.static('public/js'));
 app.use(express.static('public/css'));
