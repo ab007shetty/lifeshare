@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css "
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="/img/blood.png" />
+
+    <title>Blood Bank</title>
+  </head>
+
+  <body class="tg">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+        <a class="navbar-brand" href="#"
+          ><img src="img/blood.png" height="30" width="41" alt=""
+        /></a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html"
+                ><span class="fa fa-home fa-lg"></span> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><span class="fa fa-info fa-lg"></span> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><span class="fa fa-users fa-lg"></span> Donor</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                ><span class="fa fa-address-card fa-lg"></span> Contact</a
+              >
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <a data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span>Login
+            </a>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputEmail3"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputEmail3"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputPassword3"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputPassword3"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="col-sm-auto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" />
+                    <label class="form-check-label"> Remember me </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm ml-auto"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">
+                  Sign in
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="jumbotron">
+      <div class="container">
+        <div class="row row-header">
+          <div class="col-12 col-sm-6">
+            <h1>xSpark-Blood bank</h1>
+            <p>
+              We are proud that we are life givers to the people who are need in
+              blood!
+            </p>
+            <div class="cg">
+              <div class="card card-body bg">
+                <blockquote cite="blockquote">
+                  <p class="mb-0">
+                    <em
+                      >Blessed are the young who can give life with their
+                      blood.</em
+                    ><br />
+                  </p>
+
+                  <footer class="blockquote-footer vg">A Noble Being</footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-3 offset-sm-2 align-self-center">
+            <img src="img/blood.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <ol class="col-12 breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active">Contact Us</li>
+        </ol>
+        <div class="col-12">
+          <h3>Contact Us</h3>
+          <hr />
+        </div>
+      </div>
+
+      <div class="row row-content">
+        <div class="col-12">
+          <h3>Location Information</h3>
+        </div>
+        <div class="col-12 col-sm-4 offset-sm-1">
+          <h5>Our Address</h5>
+          <address style="font-size: 100%">
+            Shri Madhwa Vadiraja Institue Of Technology<br />
+            Bantakal<br />
+            Udupi<br />
+            <i class="fa fa-phone"></i>: +91 1234 5678<br />
+            <i class="fa fa-fax"></i>: +91 8765 4321<br />
+            <i class="fa fa-envelope"></i>:
+            <a href="mailto:ab007shetty@gmail.com">xspark@gmail.com</a>
+          </address>
+        </div>
+        <div class="col-12 col-sm-6 offset-sm-1">
+          <h5></h5>
+        </div>
+        <div class="col-12 col-sm-11 offset-sm-1">
+          <div class="btn-group" role="group">
+            <a role="button" class="btn btn-primary" href="tel:+85212345678"
+              ><i class="fa fa-phone"></i> Call</a
+            >
+            <a role="button" class="btn btn-info" href="#"
+              ><i class="fa fa-skype"></i> Skype</a
+            >
+            <a
+              role="button"
+              class="btn btn-success"
+              href="mailto:confusion@food.net"
+              ><i class="fa fa-envelope-o"></i> Email</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-content">
+        <div class="col-12">
+          <h3>Send us your Feedback</h3>
+        </div>
+        <div class="col-12 col-md-9">
+          <form action="">
+            <div class="form-group row">
+              <label for="firstname" class="col-md-2 col-form-label"
+                >First Name</label
+              >
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="First Name"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lasttname" class="col-md-2 col-form-label"
+                >Last Name</label
+              >
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="telnum" class="col-12 col-md-2 col-form-label"
+                >Contact Tel.</label
+              >
+              <div class="col-5 col-md-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="areacode"
+                  name="areacode"
+                  placeholder="Area Code"
+                />
+              </div>
+              <div class="col-7 col-md-7">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telnum"
+                  name="telnum"
+                  placeholder="Tel. Number"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="emailid" class="col-md-2 col-form-label">Email</label>
+              <div class="col-md-10">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailid"
+                  name="emailid"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6 offset-md-2">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    name="approve"
+                    id="approve"
+                    value=""
+                  />
+                  <label class="form-check-label" for="approve">
+                    <strong>May we contact you?</strong>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3 offset-md-1">
+                <select class="form-control" name="" id="">
+                  <option value="">Tel.</option>
+                  <option value="">Email</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="feedback" class="col-md-2 col-form-label"
+                >Your Feedback</label
+              >
+              <div class="col-md-10">
+                <textarea
+                  class="form-control"
+                  id="feedback"
+                  name="feedback"
+                  rows="12"
+                ></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-md-2 col-md-10">
+                <button type="submit" class="btn btn-primary">
+                  Send Feedback
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-md"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 offset-1 col-sm-2">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="./aboutus.html">About</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="./contactus.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-7 col-sm-5">
+            <h5>Our Address</h5>
+            <address>
+              Shri Madhwa Vadiraja Institute Of technology<br />
+              Bantakal<br />
+              UDUPI<br />
+              <i class="fa fa-phone fa-lg"></i>: +91 1234 5678<br />
+              <i class="fa fa-fax fa-lg"></i>: +91 8765 4321<br />
+              <i class="fa fa-envelope fa-lg"></i>:
+              <a href="mailto:ab007shetty@gmail.com">xspark@gmail.com</a>
+            </address>
+          </div>
+          <div class="col-12 col-sm-4 align-self-center">
+            <div class="text-center">
+              <a
+                class="btn btn-social-icon btn-google"
+                href="http://google.com/+"
+                ><i class="fa fa-google-plus fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-facebook"
+                href="http://www.facebook.com/profile.php?id="
+                ><i class="fa fa-facebook fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-linkedin"
+                href="http://www.linkedin.com/in/"
+                ><i class="fa fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-twitter"
+                href="http://twitter.com/"
+                ><i class="fa fa-twitter fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-google"
+                href="http://youtube.com/"
+                ><i class="fa fa-youtube fa-lg"></i
+              ></a>
+              <a class="btn btn-social-icon" href="mailto:"
+                ><i class="fa fa-envelope-o fa-lg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://use.fontawesome.com/ee1c3da296.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>
