@@ -7,7 +7,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var app = express();
 var mongoose = require('mongoose');
+
 var userModel = require('./models/user');
+var Authuser = require('./models/authuser');
+
+
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 const KEY = 'ForOnceTryToBeOriginal';
 const signature = {
@@ -20,9 +26,30 @@ const escapeRegExp = (string) => {
 
 app.use(morgan('dev'));
 
-	mongoose.connect('mongodb+srv://abshetty:xHPl9iJDBtGc8lvQ@eattendance.oxj6e.mongodb.net/bloodbank?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
+	const MongoDBURI = process.env.MONGO_URI || 'mongodb+srv://abshetty:xHPl9iJDBtGc8lvQ@eattendance.oxj6e.mongodb.net/bloodbank?retryWrites=true&w=majority';
 
-//	mongoose.connect('mongodb://localhost:27017/bloodbank',{useNewUrlParser: true, useUnifiedTopology: true})
+//	const MongoDBURI = process.env.MONGO_URI || 'mongodb://localhost/btest';
+
+mongoose.connect(MongoDBURI, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+	console.log("DataBase Connected  Successfully.");
+});
+
+app.use(session({
+  secret: 'work hard',
+  resave: true,
+  saveUninitialized: false,
+  store: new MongoStore({
+    mongooseConnection: db
+  })
+}));
+
 
 app.use(express.static('public/js'));
 app.use(express.static('public/css'));
@@ -31,16 +58,19 @@ app.use(express.static('public/json'));
 app.use(cookieParser(KEY));
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
 
-// Get Index Page Request
-app.get ('/', (req, res) => {
-    res.render('index');
-});
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(__dirname + '/views'));
+
+const index = require('./routes/index');
+app.use('/', index);
+
 
 app.get('/contact', (req, res, next) => {
   res.render('contact');
@@ -57,6 +87,8 @@ app.get('/guidelines', (req, res, next) => {
 app.get('/center', (req, res, next) => {
   res.render('center');
 });
+
+//=====================================================================================================================================
 
 app.post('/register', (req, res) => {
   debug(req.body);

@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" type="image/png" href="blood.png" />
-    <title>BLOOD BANK - Conatct</title>
+    <title>BLOOD BANK</title>
 
     <!--     Fonts and icons     -->
 
@@ -38,83 +38,59 @@
       href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
       rel="stylesheet"
     />
+	
+	    <!--     Weglot     -->
 
-    <link
-      rel="stylesheet"
-      href="https://s.pageclip.co/v1/pageclip.css"
-      media="screen"
-    />
+	  <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+		<script>
+			Weglot.initialize({
+				api_key: 'wg_b315629468470fd1230c5a1bec6c00575'
+			});
+		</script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	
+<script type="text/javascript">
+		$(document).ready(() => {
 
-    <script
-      type="text/javascript"
-      src="https://cdn.weglot.com/weglot.min.js"
-    ></script>
-    <script>
-      Weglot.initialize({
-        api_key: "wg_b315629468470fd1230c5a1bec6c00575",
-      });
-    </script>
+			$("#form2").submit((event) => {
 
-    <!-- Customerly Live Chat Snippet Code -->
-    <script>
-      !(function () {
-        var e = window,
-          i = document,
-          t = "customerly",
-          n = "queue",
-          o = "load",
-          r = "settings",
-          u = (e[t] = e[t] || []);
-        if (u.t) {
-          return void u.i(
-            "[customerly] SDK already initialized. Snippet included twice."
-          );
-        }
-        u.t = !0;
-        u.loaded = !1;
-        u.o = ["event", "attribute", "update", "show", "hide", "open", "close"];
-        u[n] = [];
-        u.i = function (t) {
-          e.console && !u.debug && console.error && console.error(t);
-        };
-        u.u = function (e) {
-          return function () {
-            var t = Array.prototype.slice.call(arguments);
-            return t.unshift(e), u[n].push(t), u;
-          };
-        };
-        u[o] = function (t) {
-          u[r] = t || {};
-          if (u.loaded) {
-            return void u.i(
-              "[customerly] SDK already loaded. Use customerly.update to change settings."
-            );
-          }
-          u.loaded = !0;
-          var e = i.createElement("script");
-          (e.type = "text/javascript"),
-            (e.async = !0),
-            (e.src = "https://messenger.customerly.io/launcher.js");
-          var n = i.getElementsByTagName("script")[0];
-          n.parentNode.insertBefore(e, n);
-        };
-        u.o.forEach(function (t) {
-          u[t] = u.u(t);
-        });
-      })();
+				event.preventDefault();
 
-      customerly.load({
-        app_id: "96549d39",
-      });
-    </script>
-    <!-- End of Customerly Live Chat Snippet Code -->
+				$.ajax({
+					type: 'POST',
+					url: '/forgetpass',
+					data: $('#form2').serialize(),
+					dataType: "json",
+					success: (response) => {
+						//alert("a");
+						//console.log(response.Success);
+						$('#form2')[0].reset();
+						//alert("abc");
+						document.getElementById("check").innerHTML = response.Success;
 
+						setTimeout(() => {
+							document.getElementById("check").innerHTML = "";
+						}, 3000);
+						if (response.Success == "Password changed!") {
+							document.getElementById("aa").click();
+						};
+					},
+					error: () => {
+					}
+				})
+			});
+
+		});
+	</script>
+	
     <link href="footer.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="creativetim.min.css" type="text/css" />
   </head>
 
-  <body class="bg-white" id="up">
+  <body class="bg-white" id="top">
     <!-- Navbar -->
     <nav
       id="navbar-main"
@@ -208,186 +184,119 @@
                 >
               </a>
             </li>
-				  
-		  
-		  <li class="nav-item">
+			
+			<li class="nav-item">
               <a href="/login" class="nav-link">
                 <span class="text-white nav-link-inner--text"
                   ><i class="text-white fas fa-sign-in-alt"></i> Login</span
                 >
               </a>
             </li>
-			
-		    </ul>
+          </ul>
+
 		  
         </div>
       </div>
     </nav>
     <!-- End Navbar -->
 
-    <div class="wrapper bg-gradient-white">
-      <header class="jumbotron bg-gradient-warning">
-        <div class="container">
-          <div class="row row-header">
-            <div class="col-12 col-sm-6">
-              <h1>xSpark-LifeShare</h1>
-              <p class="text-white">
-                We are proud that we are life givers to the people who are need
-                in blood!
-              </p>
-              <div class="cg">
-                <div class="card card-body bg-gradient-info">
-                  <blockquote cite="blockquote">
-                    <h6 class="mb-0 text-dark">
-                      <em><b>A drop for you, an ocean for someone else.</b></em>
-                    </h6>
-                    <br />
-
-                    <footer class="blockquote-footer vg text-dark">
-                      A Noble Being
-                    </footer>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-3 offset-sm-2 align-self-center">
-              <img src="blood.png" class="img-fluid" alt="" />
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- ======================================================================================================================================== -->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-primary badge-pill mb-3">Contact</span>
-            <h3 class="display-3">Contact Us</h3>
-          </div>
-        </div>
-
-        <div class="row row-content align-text-center">
-          <div class="col-12">
-            <div class="col-12">
-              <div class="card card-body bg-dark">
-                <form
-                  action="https://send.pageclip.co/BOUiBiDuD3Sfwq3JSPY8SyIZJd3Zo2oh/BloodBank"
-                  class="pageclip-form"
-                  method="post"
-                >
-                  <div class="form-group row">
-                    <label for="name" class="col-md-2 col-form-label"
-                      ><h6 class="text-white">Name</h6>
-                    </label>
-                    <div class="col-md-10">
-                      <input
-                        type="text"
-                        class="form-control"
-                        required
-                        id="name"
-                        name="name"
-                        placeholder="Full Name"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="telnum" class="col-12 col-md-2 col-form-label">
-                      <h6 class="text-white">Contact Tel</h6></label
-                    >
-                    <div class="col-5 col-md-3">
-                      <input
-                        type="tel"
-                        class="form-control"
-                        required
-                        id="countrycode"
-                        name="countrycode"
-                        placeholder="Country code"
-                      />
-                    </div>
-                    <div class="col-7 col-md-7">
-                      <input
-                        type="tel"
-                        class="form-control"
-                        required
-                        id="telnum"
-                        name="telnum"
-                        placeholder="Tel. number"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="emailid" class="col-md-2 col-form-label">
-                      <h6 class="text-white">Email</h6></label
-                    >
-                    <div class="col-md-10">
-                      <input
-                        type="email"
-                        class="form-control"
-                        required
-                        id="email"
-                        name="email"
-                        placeholder="abc@xyz.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="feedback" class="col-md-2 col-form-label">
-                      <h6 class="text-white">Queries</h6></label
-                    >
-                    <div class="col-md-10">
-                      <textarea
-                        class="form-control"
-                        id="feedback"
-                        name="feedback"
-                        placeholder="Your Message..."
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="offset-md-2 col-md-2">
-                      <button
-                        type="submit"
-                        class="btn btn-danger pageclip-form__submit"
-                      >
-                        SEND
-                      </button>
-                    </div>
-
-                    <div class="offset-md-4 text-justify-content-end">
-                      <div class="btn-group" role="group">
-                        <a
-                          role="button"
-                          class="btn btn-primary"
-                          href="tel:+85212345678"
-                          ><i class="fa fa-phone"></i> Call</a
-                        >
-                        <a role="button" class="btn btn-info" href="#"
-                          ><i class="fa fa-skype"></i> Skype</a
-                        >
-                        <a
-                          role="button"
-                          class="btn btn-success"
-                          href="mailto:ab007shetty@gmail"
-                          ><i class="fa fa-envelope-o"></i> Email</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
+    <div class="wrapper bg-gradient-info">
+      
+	    
+	 <!-- ======================================================================================================================================== -->
+		    <!-- Login Form -->
+<div class="main-content">
+  <!-- Header -->
+  <!-- Page content -->
+  <section class="section section-lg section-shaped ">
+    <div class="shape shape-style-2 shape-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container pt-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="card bg-secondary shadow border-0">
+            
+            <div class="card-body px-lg-5 py-lg-5">
+               
+			   
+			   
+	
+	<div class="col-md-12 form-card">
+		<div>
+			<p>Change Password</p>
+		</div>
+		<div class="form-group">
+			<form id="form2" method="post">
+				<input type="text" name="email" placeholder="E-mail" required="" class="form-control"><br />
+				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br />
+				<input type="password" name="passwordConf" placeholder="Confirm Password" required=""
+					class="form-control"><br />
+				<input type="submit" value="Change" class="btn btn-success">
+			</form>
+		</div>
+		<div class="mssg bg-danger">
+			<span id="check"></span>
+		</div>
+		<div id="LangTable"><a href="/login" id="aa"></a>
+		</div>
+		<div id="LangTable"> Click Here to <a href="/login">Login</a>
+		</div>
+	</div>
+			   
+			   
+			   
+		
             </div>
           </div>
+
         </div>
       </div>
+    </div>
+  </section>
 
+</div>
+	
+	
+	
+	
+	
+	
+	<div class="col-md-4 col-md-offset-4 form-card">
+		<div>
+			<p>Change Password</p>
+		</div>
+		<div class="form-group">
+			<form id="form2" method="post">
+				<input type="text" name="email" placeholder="E-mail" required="" class="form-control"><br />
+				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br />
+				<input type="password" name="passwordConf" placeholder="Confirm Password" required=""
+					class="form-control"><br />
+				<input type="submit" value="Change" class="btn btn-success">
+			</form>
+		</div>
+		<div class="mssg bg-danger">
+			<span id="check"></span>
+		</div>
+		<div id="LangTable"><a href="/login" id="aa"></a>
+		</div>
+		<div id="LangTable"><span>Go back to </span><a href="/">Register</a> or <a href="/login">Login</a>
+		</div>
+	</div>
       <!-- ======================================================================================================================================== -->
 
       <footer class="footer" id="bottom">
+
+
         <div class="container">
           <div class="row row-grid align-items-center mb-5">
             <div class="col-lg-6">
@@ -476,21 +385,16 @@
             </div>
           </div>
         </div>
+		       <a href="#top" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+
       </footer>
 
       <!-- ======================================================================================================================================== -->
     </div>
 
 
-
     <!-- Core -->
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
