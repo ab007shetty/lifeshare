@@ -75,3 +75,11 @@
   color: red;
   float: right;
 }
+
+/*============CSS FOR CAROUSEL*/
+
+.required-field::before {
+  content: "*";
+  color: red;
+  float: right;
+}
