@@ -69,6 +69,7 @@ app.post('/register', (req, res) => {
           bloodGroup: req.body.blood.toUpperCase() + req.body.rh,
           city: req.body.city.toUpperCase(),
           phone: req.body.phone,
+		  email: req.body.email,
           address: req.body.address,
         })
           .save()

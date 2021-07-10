@@ -39,8 +39,7 @@ var mySchema = new schema(
     },
 	email: {
       type: String,
-      trim: true,
-	  default: '',
+      default: "",
     },
     address: {
       type: String,
