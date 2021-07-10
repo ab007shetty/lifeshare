@@ -203,7 +203,7 @@
           <div class="row align-items-center">
             <div class="col-lg-6">
               <div class="info info-horizontal info-hover-danger">
-                <div class="description pl-5">
+                <div class="description pl-4">
                   <h3 class="title">For Donors</h3>
                   <p class="">
                     The volunteers who wish to donate their blood can register
@@ -245,7 +245,7 @@
                     mb-5
                   "
                 >
-                  <i class="ni ni-favourite-28"> </i>
+                  <i class="fad fa-cube"> </i>
                 </div>
                 <h3 class="display-3">Features</h3>
                 <p>
@@ -321,7 +321,7 @@
                         text-primary
                       "
                     >
-                      <i class="ni ni-satisfied text-info"> </i>
+                      <i class="fas fa-tasks text-info"> </i>
                     </div>
                     <h5 class="info-title text-white">Multi Use</h5>
                     <p class="description">
@@ -341,7 +341,7 @@
                         text-primary
                       "
                     >
-                      <i class="ni ni-palette text-danger"> </i>
+                      <i class="fad fa-splotch text-danger"> </i>
                     </div>
                     <h5 class="info-title text-white">Awesome Design</h5>
                     <p class="description">
@@ -361,7 +361,7 @@
                         text-primary
                       "
                     >
-                      <i class="ni ni-spaceship text-default"> </i>
+                      <i class="fas fa-cogs text-default"> </i>
                     </div>
                     <h5 class="info-title text-white">Great Performance</h5>
                     <p class="description">
@@ -383,7 +383,7 @@
                         text-primary
                       "
                     >
-                      <i class="ni ni-planet text-primary"> </i>
+                      <i class="fas fa-users text-primary"> </i>
                     </div>
                     <h5 class="info-title text-white">User Friendly</h5>
                     <p class="description">
@@ -403,7 +403,7 @@
                         text-primary
                       "
                     >
-                      <i class="ni ni-books text-warning"> </i>
+                      <i class="fad fa-book-open text-warning"> </i>
                     </div>
                     <h5 class="info-title text-white">
                       In-Depth Documentation
@@ -425,7 +425,7 @@
                         text-primary
                       "
                     >
-                      <i class="ni ni-atom text-success"> </i>
+                      <i class="fad fa-hospitals text-success"> </i>
                     </div>
                     <h5 class="info-title text-white">Centres</h5>
                     <p class="description">
@@ -634,7 +634,7 @@
               <div class="form-group row">
                 <label
                   for="firstname"
-                  class="col-md-2 col-form-label text-white"
+                  class="col-md-2 col-form-label text-white required-field"
                   >Full Name</label
                 >
                 <div class="col-md-10">
@@ -654,7 +654,7 @@
               <div class="form-group row">
                 <label
                   for="firstname"
-                  class="col-md-2 col-form-label text-white"
+                  class="col-md-2 col-form-label text-white required-field"
                   for="blood"
                   >Blood Group</label
                 >
@@ -677,11 +677,11 @@
               <div class="form-group row">
                 <label
                   for="firstname"
-                  class="col-md-2 col-form-label text-white"
+                  class="col-md-2 col-form-label text-white required-field"
                   for="rh"
                   >RH Factor</label
                 >
-                <div class="col-3">
+                <div class="col-3 offset-sm-2">
                   <label>
                     <input
                       class="form-control"
@@ -703,13 +703,15 @@
                       type="radio"
                       required
                     />
-                    <span class="text-white">Negetive</span>
+                    <span class="text-white">Negative</span>
                   </label>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="col-md-2 col-form-label text-white">Phone</label>
+                <label class="col-md-2 col-form-label text-white required-field"
+                  >Phone</label
+                >
                 <div class="col-md-10">
                   <input
                     autocomplete="new-password"
@@ -724,9 +726,11 @@
                   />
                 </div>
               </div>
-			  
-			  <div class="form-group row">
-                <label class="col-md-2 col-form-label text-white" for="email" >Email</label>
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label text-white" for="email"
+                  >Email</label
+                >
                 <div class="col-md-10">
                   <input
                     autocomplete="new-password"
@@ -735,13 +739,15 @@
                     id="email"
                     name="email"
                     type="email"
-					class="validate"
+                    class="validate"
                   />
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="col-md-2 col-form-label text-white" for="city"
+                <label
+                  class="col-md-2 col-form-label text-white required-field"
+                  for="city"
                   >District</label
                 >
                 <div class="col-md-10">
@@ -757,7 +763,9 @@
               </div>
 
               <div class="form-group row">
-                <label for="address" class="col-md-2 col-form-label text-white"
+                <label
+                  for="address"
+                  class="col-md-2 col-form-label text-white required-field"
                   >Address</label
                 >
                 <div class="col-md-10">
