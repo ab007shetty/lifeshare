@@ -1,267 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/png" href="blood.png" />
+    <title>BLOOD BANK - Donars List</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/png" href="blood.png" />
-  <title>BLOOD BANK - Donars List </title>
+    <!--     Fonts and icons     -->
 
-  <!--     Fonts and icons     -->
-  
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	
-	<link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css "/>
-	
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
 
-   <link href="footer.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css "
+    />
 
-  <link rel="stylesheet" href="creativetim.min.css" type="text/css">
-  
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+      rel="stylesheet"
+    />
 
+    <link href="footer.css" rel="stylesheet" />
 
-<body class="bg-white" id="up">
+    <link rel="stylesheet" href="creativetim.min.css" type="text/css" />
+  </head>
 
-  <!-- Navbar -->
-  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg bg-default navbar-light position-sticky top-0 shadow py-0">
-    <div class="container">
-             <ul class="navbar-nav navbar-nav-hover align-items-lg-center ">
+  <body class="bg-white" id="up">
+    <!-- Navbar -->
+    <nav
+      id="navbar-main"
+      class="
+        navbar navbar-main navbar-expand-lg
+        bg-default
+        navbar-light
+        position-sticky
+        top-0
+        shadow
+        py-0
+      "
+    >
+      <div class="container">
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
           <li class="nav-item dropdown">
-            <a href="/" class=" navbar-brand mr-lg-5" >
-              <img class="img img-fluid img-responsive" src="blood.png">
-              <img class="img img-fluid img-responsive" src="bb1.png">        			  
-
+            <a href="/" class="navbar-brand mr-lg-5">
+              <img class="img img-fluid img-responsive" src="blood.png" />
+              <img class="img img-fluid img-responsive" src="bb1.png" />
             </a>
-  
           </li>
         </ul>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text-white"></span>
-      </button>
-      <div class="navbar-collapse collapse bg-default" id="navbar_global">
-        <div class="navbar-collapse-header ">
-          <div class="row ">
-            <div class="col-10 collapse-brand ">
-              <a href="/">
-                <img src="T2.png">
-              </a>
-            </div>
-            <div class="col-2 collapse-close bg-danger">
-              <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-              </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar_global"
+          aria-controls="navbar_global"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon text-white"></span>
+        </button>
+        <div class="navbar-collapse collapse bg-default" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-10 collapse-brand">
+                <a href="/">
+                  <img src="T2.png" />
+                </a>
+              </div>
+              <div class="col-2 collapse-close bg-danger">
+                <button
+                  type="button"
+                  class="navbar-toggler"
+                  data-toggle="collapse"
+                  data-target="#navbar_global"
+                  aria-controls="navbar_global"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <ul class="navbar-nav align-items-lg-center mr-auto">
-
+          <ul class="navbar-nav align-items-lg-center mr-auto">
+            <li class="nav-item">
+              <a href="/bank" class="nav-link">
+                <span class="text-white nav-link-inner--text"
+                  ><i class="text-white fas fa-users"></i> Donars</span
+                >
+              </a>
+            </li>
 
             <li class="nav-item">
-                    <a href="/bank"   class="nav-link">
-                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-users"></i> Donars</span>
-                    </a>
-                </li>
+              <a href="/guidelines" class="nav-link">
+                <span class="text-white nav-link-inner--text"
+                  ><i class="text-white fas fa-heart"></i> Guidelines</span
+                >
+              </a>
+            </li>
 
-                 <li class="nav-item">
-                    <a href="/guidelines"   class="nav-link">
-                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-heart"></i> Guidelines</span>
-                    </a>
-								
-                </li>
-				
-				<li class="nav-item">
-                    <a href="/faq"   class="nav-link">
-                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-question"></i> FAQ's</span>
-                    </a>
-								
-                </li>
-				
-				<li class="nav-item">
-                    <a href="/center"   class="nav-link">
-                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-hospital"></i> Centers</span>
-                    </a>
-								
-                </li>
-				
-				<li class="nav-item">
-                    <a href="/contact"   class="nav-link">
-                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-address-card "></i> Contact</span>
-                    </a>
-								
-                </li>
-        </ul>
-		 <span class="navbar-tex text-white">
+            <li class="nav-item">
+              <a href="/faq" class="nav-link">
+                <span class="text-white nav-link-inner--text"
+                  ><i class="text-white fas fa-question"></i> FAQ's</span
+                >
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/center" class="nav-link">
+                <span class="text-white nav-link-inner--text"
+                  ><i class="text-white fas fa-hospital"></i> Centers</span
+                >
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">
+                <span class="text-white nav-link-inner--text"
+                  ><i class="text-white fas fa-address-card"></i> Contact</span
+                >
+              </a>
+            </li>
+          </ul>
+          <span class="navbar-tex text-white">
             <a data-toggle="modal" data-target="#loginModal">
               <i class="fas fa-solid fa-registered"> </i> Register
             </a>
           </span>
-		  
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- End Navbar -->
-  
-  
-<div class="wrapper" >
+    </nav>
+    <!-- End Navbar -->
 
+    <div class="wrapper">
+      <header class="jumbotron bg-gradient-warning">
+        <div class="container">
+          <div class="row row-header">
+            <div class="col-12 col-sm-6">
+              <h1>xSpark-Blood Bank</h1>
+              <p class="text-white">
+                We are proud that we are life givers to the people who are need
+                in blood!
+              </p>
+              <div class="cg">
+                <div class="card card-body bg-gradient-success">
+                  <blockquote cite="blockquote">
+                    <h6 class="mb-0 text-dark">
+                      <em
+                        >Blessed are the young who can give life with their
+                        blood.</em
+                      >
+                    </h6>
+                    <br />
 
-    <header class="jumbotron bg-gradient-warning">
-      <div class="container">
-        <div class="row row-header">
-          <div class="col-12 col-sm-6">
-            <h1>xSpark-Blood Bank</h1>
-            <p class="text-white">
-              We are proud that we are life givers to the people who are need in
-              blood!
-            </p>
-            <div class="cg">
-              <div class="card card-body bg-gradient-success">
-                <blockquote cite="blockquote">
-                  <h6 class="mb-0 text-dark"><em>Blessed are the young who can give life with their blood.</em></h6><br>
-                
-                  <footer class="blockquote-footer vg text-dark">A Noble Being</footer>
-                </blockquote>
+                    <footer class="blockquote-footer vg text-dark">
+                      A Noble Being
+                    </footer>
+                  </blockquote>
+                </div>
               </div>
             </div>
-    
-          </div>
-          <div class="col-12 col-sm-3 offset-sm-2 align-self-center">
-            <img src="blood.png" class="img-fluid" alt="" />
-          </div>
-        </div>
-      </div>
-    </header>
-
-   
-<!-- ======================================================================================================================================== -->
-
-		<div class="container">
-		<div class="row">
-                <div class="col-md-8 mx-auto text-center">
-                    <span class="badge badge-primary badge-pill mb-3">List</span>
-                    <h3 class="display-3 ">Donars List</h3>
-                </div>
+            <div class="col-12 col-sm-3 offset-sm-2 align-self-center">
+              <img src="blood.png" class="img-fluid" alt="" />
             </div>
-		
-		
-		
-		<div class="row section">
-			<% if(docs.length == 0){ %>
-			<div class="container center">
-				<p class="white-text flow-text">Please Add Some Data. <a
-						style="text-decoration: underline" class="white-text" href="/"> Home Page </a>.</p>
-			</div>
-			<%} else { %>
-			<% docs.forEach((doc)=>{ %>
-			<div class="col-12 col-md-6">
-				<div class="card bg-gradient-dark ">
-					<div class="card-content text-white">
-					
-					<div class="card-action pull-right">
-						<a href="tel:<%= doc.phone %>" class="btn btn-warning white-text">Call me!</a>
-					</div>
-					
-						<h5 class="card-title text-success text-center font-weight-bold">
-							<%= doc.name.substr(0,25) %></h5>
-							
-						<div class="row">						
-						
-							<h6 class="col-12 text-white">Blood Group : <span class=" text-danger font-weight-bold"><%= doc.bloodGroup %></span> </h6>														
-						
-							<h6 class="col-12 text-white">District : <span class="text-info"><%= doc.city.substr(0,18) %></span> </h6>													
-							
-							<h6 class="col-12 text-white">Address : <span class="text-info"><%= doc.address %></span> </h6>
-							
-							<h6 class="col-12 text-white">Registered At : <span class="text-info"><%= doc.createdAt %></span> </h6>														
-													
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			<% })} %>
-		</div>
-		
-</div>
-<!-- ======================================================================================================================================== -->
-		
-	
-<footer class="footer " id="bottom">
-
-    <div class="container">
-      <div class="row row-grid align-items-center mb-5">
-        <div class="col-lg-6">
-          <h3 class="text-primary font-weight-light mb-2">Thank you for Donating Blood!</h3>
-          <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
-        </div>
-        <div class="col-lg-4 text-lg-right btn-wrapper social-network">
-				                    
-                <span>
-                  <a href="mailto:eattendance1999@gmail.com?subject=EAttendance" data-toggle="tooltip" data-original-title="Mail Us"><i class="fa-lg fas fa-envelope"></i></a>
-                </span>
-                <span>
-                  <a href="https://twitter.com/" target="blank" data-toggle="tooltip" data-original-title="Follow Us"><i class="fa-lg  fab fa-twitter"></i></a>
-                </span>
-                <span>
-                  <a href="https://www.linkedin.com/" target="blank" data-toggle="tooltip" data-original-title="Follow Us"><i class="fa-lg  fab fa-linkedin"></i></a>
-                </span>
-                <span>
-                  <a href="https://www.instagram.com/" target="blank" data-toggle="tooltip" data-original-title="Like Us"><i class="fa-lg fab fa-instagram"></i></a>
-                </span>
-                <span>
-                  <a href="https://github.com/ab007shetty/" target="blank" data-toggle="tooltip" data-original-title="Star on Github"><i class="fa-lg  fab fa-github"></i></a>
-                </span>      
-        
-        </div>
-              <div class="col-lg-2">
-                <a  href=""  >
-              <img class="img img-fluid img-responsive" width="100%" src="play.png">
-          </a>
-      </div>
-
-      </div>
-      <hr >
-      <div class="row align-items-center justify-content-md-between">
-        <div class="col-md-6">
-          <div class="copyright">
-            &copy; 2020 <a href="/" target="_blank">BLOOD BANK</a>
           </div>
         </div>
-        <div class="col-md-6">
-          <ul class="nav nav-footer justify-content-end">
-            <li class="nav-item">
-              <a href="/" class="nav-link" >BLOOD BANK</a>
-            </li>
-            <li class="nav-item">
-              <a href="/faq" class="nav-link" >FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a href="/bank" class="nav-link" >Donar List</a>
-            </li>
+      </header>
 
-          </ul>
+      <!-- ======================================================================================================================================== -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto text-center">
+            <span class="badge badge-primary badge-pill mb-3">List</span>
+            <h3 class="display-3">Donars List</h3>
+          </div>
+        </div>
+
+        <div class="row section">
+          <% if(docs.length == 0){ %>
+          <div class="container center">
+            <p class="white-text flow-text">
+              Please Add Some Data.
+              <a style="text-decoration: underline" class="white-text" href="/">
+                Home Page </a
+              >.
+            </p>
+          </div>
+          <%} else { %> <% docs.forEach((doc)=>{ %>
+          <div class="col-12 col-md-6">
+            <div class="card bg-gradient-dark">
+              <div class="card-content text-white">
+                <div class="card-action pull-right">
+                  <a
+                    href="tel:<%= doc.phone %>"
+                    class="btn btn-warning white-text"
+                    >Call me!</a
+                  >
+                </div>
+
+                <h5
+                  class="card-title text-success text-center font-weight-bold"
+                >
+                  <%= doc.name.substr(0,25) %>
+                </h5>
+
+                <div class="row">
+                  <h6 class="col-12 text-white">
+                    Blood Group :
+                    <span class="text-danger font-weight-bold"
+                      ><%= doc.bloodGroup %></span
+                    >
+                  </h6>
+
+                  <h6 class="col-12 text-white">
+                    District :
+                    <span class="text-info"><%= doc.city.substr(0,18) %></span>
+                  </h6>
+
+                  <h6 class="col-12 text-white">
+                    Address : <span class="text-info"><%= doc.address %></span>
+                  </h6>
+
+                  <h6 class="col-12 text-white">
+                    Registered At :
+                    <span class="text-info"><%= doc.createdAt %></span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% })} %>
         </div>
       </div>
+      <!-- ======================================================================================================================================== -->
+
+      <footer class="footer" id="bottom">
+        <div class="container">
+          <div class="row row-grid align-items-center mb-5">
+            <div class="col-lg-6">
+              <h3 class="text-primary font-weight-light mb-2">
+                Thank you for Donating Blood!
+              </h3>
+              <h4 class="mb-0 font-weight-light">
+                Let's get in touch on any of these platforms.
+              </h4>
+            </div>
+            <div class="col-lg-4 text-lg-right btn-wrapper social-network">
+              <span>
+                <a
+                  href="mailto:eattendance1999@gmail.com?subject=EAttendance"
+                  data-toggle="tooltip"
+                  data-original-title="Mail Us"
+                  ><i class="fa-lg fas fa-envelope"></i
+                ></a>
+              </span>
+              <span>
+                <a
+                  href="https://twitter.com/"
+                  target="blank"
+                  data-toggle="tooltip"
+                  data-original-title="Follow Us"
+                  ><i class="fa-lg fab fa-twitter"></i
+                ></a>
+              </span>
+              <span>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="blank"
+                  data-toggle="tooltip"
+                  data-original-title="Follow Us"
+                  ><i class="fa-lg fab fa-linkedin"></i
+                ></a>
+              </span>
+              <span>
+                <a
+                  href="https://www.instagram.com/"
+                  target="blank"
+                  data-toggle="tooltip"
+                  data-original-title="Like Us"
+                  ><i class="fa-lg fab fa-instagram"></i
+                ></a>
+              </span>
+              <span>
+                <a
+                  href="https://github.com/ab007shetty/"
+                  target="blank"
+                  data-toggle="tooltip"
+                  data-original-title="Star on Github"
+                  ><i class="fa-lg fab fa-github"></i
+                ></a>
+              </span>
+            </div>
+            <div class="col-lg-2">
+              <a href="">
+                <img
+                  class="img img-fluid img-responsive"
+                  width="100%"
+                  src="play.png"
+                />
+              </a>
+            </div>
+          </div>
+          <hr />
+          <div class="row align-items-center justify-content-md-between">
+            <div class="col-md-6">
+              <div class="copyright">
+                &copy; 2021 <a href="/" target="_blank">BLOOD BANK</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <ul class="nav nav-footer justify-content-end">
+                <li class="nav-item">
+                  <a href="/" class="nav-link">BLOOD BANK</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/faq" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/bank" class="nav-link">Donar List</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- ======================================================================================================================================== -->
     </div>
-  </footer>	
 
-<!-- ======================================================================================================================================== -->
+    <!-- MODALS HERE -->
 
-</div>
-
-   <!-- MODALS HERE -->
-
-	<div id="loginModal" class="modal fade" role="dialog">
+    <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <div class="modal-content">
           <div class="modal-header">
@@ -271,97 +364,178 @@
             </button>
           </div>
           <div class="modal-body bg-gradient-info">
-		  
-		<form class="col s12 l5 white-text" action="/register" method="POST" autocomplete="new-password">
-            <div class="form-group row">
-			<label for="firstname" class="col-md-2 col-form-label text-white">Full Name</label>
-            <div class="col-md-10">
-              <input autocomplete="new-password" class="form-control" required placeholder="Name" id="first_name"
-				name="name" type="text" class="validate">
+            <form
+              class="col s12 l5 white-text"
+              action="/register"
+              method="POST"
+              autocomplete="new-password"
+            >
+              <div class="form-group row">
+                <label
+                  for="firstname"
+                  class="col-md-2 col-form-label text-white"
+                  >Full Name</label
+                >
+                <div class="col-md-10">
+                  <input
+                    autocomplete="new-password"
+                    class="form-control"
+                    required
+                    placeholder="Name"
+                    id="first_name"
+                    name="name"
+                    type="text"
+                    class="validate"
+                  />
+                </div>
               </div>
-            </div>
-			
-            <div class="form-group row">
-			<label for="firstname" class="col-md-2 col-form-label text-white" for="blood">Blood Group</label>
-              <div class="col-md-10">
-               <select name="blood" id="blood" class="validate form-control" required>
-							<option value="">Select</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="O">O</option>
-							<option value="AB">AB</option>
-				</select>
+
+              <div class="form-group row">
+                <label
+                  for="firstname"
+                  class="col-md-2 col-form-label text-white"
+                  for="blood"
+                  >Blood Group</label
+                >
+                <div class="col-md-10">
+                  <select
+                    name="blood"
+                    id="blood"
+                    class="validate form-control"
+                    required
+                  >
+                    <option value="">Select</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="O">O</option>
+                    <option value="AB">AB</option>
+                  </select>
+                </div>
               </div>
-            </div>
-			
-            <div class="form-group row">
-				<label for="firstname" class="col-md-2 col-form-label text-white" for="rh">RH Factor</label>
-              <div class="col-3">
-               <label>
-				<input class="  form-control" value="+" name="rh" type="radio" required />
-			<span class="text-white">Positive</span>
-			</label>
+
+              <div class="form-group row">
+                <label
+                  for="firstname"
+                  class="col-md-2 col-form-label text-white"
+                  for="rh"
+                  >RH Factor</label
+                >
+                <div class="col-3">
+                  <label>
+                    <input
+                      class="form-control"
+                      value="+"
+                      name="rh"
+                      type="radio"
+                      required
+                    />
+                    <span class="text-white">Positive</span>
+                  </label>
+                </div>
+
+                <div class="col-3">
+                  <label>
+                    <input
+                      class="form-control"
+                      value="-"
+                      name="rh"
+                      type="radio"
+                      required
+                    />
+                    <span class="text-white">Negetive</span>
+                  </label>
+                </div>
               </div>
-			  
-              <div class="col-3">
-                <label>
-				<input class=" form-control" value="-" name="rh" type="radio" required />
-				<span class="text-white">Negetive</span>
-				</label>
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label text-white">Phone</label>
+                <div class="col-md-10">
+                  <input
+                    autocomplete="new-password"
+                    class="white-text form-control"
+                    required
+                    placeholder="Contact Number"
+                    id="phone"
+                    name="phone"
+                    type="text"
+                    pattern="[789][0-9]{9}"
+                    class="validate"
+                  />
+                </div>
               </div>
-            </div>
-			
-            <div class="form-group row">
-			<label class="col-md-2 col-form-label text-white">Phone</label>
-              <div class="col-md-10">
-               <input autocomplete="new-password" class="white-text form-control" required placeholder="Contact Number" id="phone"
-				name="phone" type="text" pattern="[789][0-9]{9}" class="validate">
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label text-white" for="city"
+                  >City</label
+                >
+                <div class="col-md-10">
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    class="validate form-control"
+                    required
+                    placeholder="District "
+                  />
+                </div>
               </div>
-            </div>
-			
-			 <div class="form-group row">
-				<label class="col-md-2 col-form-label text-white" for="city">City</label>
-              <div class="col-md-10">
-               <input type="text" name="city" id="city" class="validate form-control" required placeholder="District ">					
+
+              <div class="form-group row">
+                <label for="address" class="col-md-2 col-form-label text-white"
+                  >Address</label
+                >
+                <div class="col-md-10">
+                  <textarea
+                    autocomplete="new-password"
+                    maxlength="80"
+                    id="address"
+                    placeholder="Enter your Address"
+                    name="address"
+                    class="
+                      materialize-textarea
+                      white-text
+                      validate
+                      form-control
+                    "
+                    required
+                  ></textarea>
+                </div>
               </div>
-            </div>
-			
-			 <div class="form-group row">
-				<label for="address" class="col-md-2 col-form-label text-white">Address</label>
-              <div class="col-md-10">
-               <textarea autocomplete="new-password" maxlength="80" id="address" placeholder="Enter your Address"
-				name="address" class="materialize-textarea white-text validate form-control" required></textarea>
+
+              <div class="form-group row">
+                <div class="offset-md-2 col-md-10">
+                  <button class="btn btn-success form-control" type="submit">
+                    Register
+                  </button>
+                </div>
               </div>
-            </div>
-							
-            <div class="form-group row">
-              <div class="offset-md-2 col-md-10">				
-               <button class="btn  btn-success form-control" type="submit">Register</button>										
-              </div>
-            </div>
-          </form>
-			
+            </form>
           </div>
         </div>
       </div>
     </div>
-	
 
-  <!-- Core -->
-	<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <!-- Core -->
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
- 
- 	
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
-	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
 
-	<script src="https://use.fontawesome.com/ee1c3da296.js"></script>
-</body>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
+    <script src="https://use.fontawesome.com/ee1c3da296.js"></script>
+  </body>
 </html>
