@@ -37,6 +37,10 @@ var mySchema = new schema(
       },
       unique: true,
     },
+	email: {
+      type: String,
+      default: "",
+    },
     address: {
       type: String,
       required: true,

@@ -405,15 +405,39 @@
             </div>
 			
             <div class="form-group row">
-			<label class="col-md-2 col-form-label text-white">Phone</label>
-              <div class="col-md-10">
-               <input autocomplete="new-password" class="white-text form-control" required placeholder="Contact Number" id="phone"
-				name="phone" type="text" pattern="[789][0-9]{9}" class="validate">
+                <label class="col-md-2 col-form-label text-white">Phone</label>
+                <div class="col-md-10">
+                  <input
+                    autocomplete="new-password"
+                    class="white-text form-control"
+                    required
+                    placeholder="Contact Number"
+                    id="phone"
+                    name="phone"
+                    type="text"
+                    pattern="[6789][0-9]{9}"
+                    class="validate"
+                  />
+                </div>
               </div>
-            </div>
+			  
+			  <div class="form-group row">
+                <label class="col-md-2 col-form-label text-white" for="email" >Email</label>
+                <div class="col-md-10">
+                  <input
+                    autocomplete="new-password"
+                    class="white-text validate form-control"
+                    placeholder="Email Address"
+                    id="email"
+                    name="email"
+                    type="email"
+					class="validate"
+                  />
+                </div>
+              </div>
 			
 			 <div class="form-group row">
-				<label class="col-md-2 col-form-label text-white" for="city">City</label>
+				<label class="col-md-2 col-form-label text-white" for="city">District</label>
               <div class="col-md-10">
                <input type="text" name="city" id="city" class="validate form-control" required placeholder="District ">					
               </div>

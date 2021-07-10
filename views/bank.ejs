@@ -219,6 +219,16 @@
                       ><%= doc.bloodGroup %></span
                     >
                   </h6>
+				  
+				  <h6 class="col-12 text-white">
+                    Phone :
+                    <span class="text-info"><%= doc.phone %></span>
+                  </h6>
+				  
+				  <h6 class="col-12 text-white">
+                    Email :
+                    <span class="text-info"><%= doc.email %></span>
+                  </h6>
 
                   <h6 class="col-12 text-white">
                     District :
@@ -228,11 +238,7 @@
                   <h6 class="col-12 text-white">
                     Address : <span class="text-info"><%= doc.address %></span>
                   </h6>
-
-                  <h6 class="col-12 text-white">
-                    Registered At :
-                    <span class="text-info"><%= doc.createdAt %></span>
-                  </h6>
+                 
                 </div>
               </div>
             </div>
@@ -442,15 +448,30 @@
                     id="phone"
                     name="phone"
                     type="text"
-                    pattern="[789][0-9]{9}"
+                    pattern="[6789][0-9]{9}"
                     class="validate"
+                  />
+                </div>
+              </div>
+			  
+			  <div class="form-group row">
+                <label class="col-md-2 col-form-label text-white" for="email" >Email</label>
+                <div class="col-md-10">
+                  <input
+                    autocomplete="new-password"
+                    class="white-text validate form-control"
+                    placeholder="Email Address"
+                    id="email"
+                    name="email"
+                    type="email"
+					class="validate"
                   />
                 </div>
               </div>
 
               <div class="form-group row">
                 <label class="col-md-2 col-form-label text-white" for="city"
-                  >City</label
+                  >District</label
                 >
                 <div class="col-md-10">
                   <input
