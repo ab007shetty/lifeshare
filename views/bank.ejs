@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="blood.png" />
-  <title>BLOOD BANK </title>
+  <title>BLOOD BANK - Donars List </title>
 
   <!--     Fonts and icons     -->
   
@@ -19,15 +19,11 @@
 	
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  
-  <!-- Nucleo Icons -->
-  <link href="nucleo-icons.css" rel="stylesheet" />
-  <link href="nucleo-svg.css" rel="stylesheet" />
 
    <link href="footer.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="creativetim.min.css" type="text/css">
-
+  
 </head>
 
 
@@ -39,9 +35,8 @@
              <ul class="navbar-nav navbar-nav-hover align-items-lg-center ">
           <li class="nav-item dropdown">
             <a href="/" class=" navbar-brand mr-lg-5" >
-              
-              <img class="img img-fluid img-responsive" src="bb1.png">        
-			  <img class="img img-fluid img-responsive" src="blood.png">
+              <img class="img img-fluid img-responsive" src="blood.png">
+              <img class="img img-fluid img-responsive" src="bb1.png">        			  
 
             </a>
   
@@ -73,7 +68,7 @@
 
             <li class="nav-item">
                     <a href="/bank"   class="nav-link">
-                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-university"></i> Donars</span>
+                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-users"></i> Donars</span>
                     </a>
                 </li>
 
@@ -86,21 +81,28 @@
 				
 				<li class="nav-item">
                     <a href="/faq"   class="nav-link">
-                        <span class="text-white nav-link-inner--text"><i class="text-white ni ni-laptop"></i> FAQ's</span>
+                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-question"></i> FAQ's</span>
+                    </a>
+								
+                </li>
+				
+				<li class="nav-item">
+                    <a href="/center"   class="nav-link">
+                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-hospital"></i> Centers</span>
                     </a>
 								
                 </li>
 				
 				<li class="nav-item">
                     <a href="/contact"   class="nav-link">
-                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-user-plus "></i> Contact</span>
+                        <span class="text-white nav-link-inner--text"><i class="text-white fas fa-address-card "></i> Contact</span>
                     </a>
 								
                 </li>
         </ul>
 		 <span class="navbar-tex text-white">
             <a data-toggle="modal" data-target="#loginModal">
-              <span class="fa fa-sign-in"></span>Register
+              <i class="fas fa-solid fa-registered"> </i> Register
             </a>
           </span>
 		  
@@ -110,8 +112,6 @@
   <!-- End Navbar -->
   
   
-
-
 <div class="wrapper" >
 
 
@@ -144,9 +144,8 @@
 
    
 <!-- ======================================================================================================================================== -->
-	<div class="section features-6 text-dark bg-white" id="services">
-      <div class="container ">
-		
+
+		<div class="container">
 		<div class="row">
                 <div class="col-md-8 mx-auto text-center">
                     <span class="badge badge-primary badge-pill mb-3">List</span>
@@ -164,43 +163,36 @@
 			</div>
 			<%} else { %>
 			<% docs.forEach((doc)=>{ %>
-			<div class="col-12 col-md-4">
-				<div class="card bg-dark darken-1">
-					<div class="card-content white-text">
-						<span class="card-title flow-text text-primary ">
-							<%= doc.name.substr(0,25) %></span>
-						<div class="row">
-						<div>
-							<span class="col-6 ">Blood Group : </span>
-							<span class="col-6 text-danger"><%= doc.bloodGroup %></span>
-							</div>
-							<div>
-							<span class="col-6">District : </span>
-							<span class="col-6"><%= doc.city.substr(0,18) %></span><br>
-							</div>
-							<div>
-							<div>
-							<span class="col-6">Address :</span>
-							<span class="col-6 :"><%= doc.address %></span>
-							</div>
-							<span class="col-3">Created At :</span>
-							<br>
-							<span class="col-12"><%= doc.createdAt %></span>
-							</div>
-							
-						</div>
-					</div>
-					<div class="card-action">
+			<div class="col-12 col-md-6">
+				<div class="card bg-gradient-dark ">
+					<div class="card-content text-white">
+					
+					<div class="card-action pull-right">
 						<a href="tel:<%= doc.phone %>" class="btn btn-warning white-text">Call me!</a>
 					</div>
+					
+						<h5 class="card-title text-success text-center font-weight-bold">
+							<%= doc.name.substr(0,25) %></h5>
+							
+						<div class="row">						
+						
+							<h6 class="col-12 text-white">Blood Group : <span class=" text-danger font-weight-bold"><%= doc.bloodGroup %></span> </h6>														
+						
+							<h6 class="col-12 text-white">District : <span class="text-info"><%= doc.city.substr(0,18) %></span> </h6>													
+							
+							<h6 class="col-12 text-white">Address : <span class="text-info"><%= doc.address %></span> </h6>
+							
+							<h6 class="col-12 text-white">Registered At : <span class="text-info"><%= doc.createdAt %></span> </h6>														
+													
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<% })} %>
 		</div>
 		
-		</div>
 </div>
-
 <!-- ======================================================================================================================================== -->
 		
 	
