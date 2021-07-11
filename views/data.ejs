@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" type="image/png" href="blood.png" />
-    <title>BLOOD BANK</title>
+    <title>Life Share</title>
 
     <!--     Fonts and icons     -->
 
@@ -129,20 +129,35 @@
           </div>
 
           <ul class="navbar-nav align-items-lg-center ml-auto">
+		  
 			<li class="nav-item">
               <a href="/bank" class="nav-link">
                 <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-users"></i> Donors</span
+                  ><i class="text-white fas fa-users"></i>Search Donors</span
                 >
               </a>
             </li>
+			
+			 <li class="navbar-tex text-white">
+            <a data-toggle="modal" data-target="#loginModal">
+              <i class="fas fa-solid fa-registered"> </i> Register to Donate &nbsp; &nbsp;
+            </a>
+          </li>
 
             
 
             <li class="nav-item">
                 <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-address-card"></i> <%= name %></span
+                  ><i class="text-white fas fa-address-card"></i>  <%= name %></span
                 >
+            </li>
+			
+			<li class="nav-item">
+              <a href="/forgetpass" class="nav-link">
+                <span class="text-white nav-link-inner--text"
+                  ><i class="text-white fas fa-users"></i> Update Password</span
+                >
+              </a>
             </li>
 			
 			<li class="nav-item">
@@ -157,83 +172,94 @@
         </div>
       </div>
     </nav>
-    <!-- End Navbar -->
-
-    <div class="wrapper bg-gradient-info">
-      
-	    
-	 
-<!-- ======================================================================================================================================== -->
-		  
-	    <!-- Login Form -->
-<div class="main-content">
-  <!-- Header -->
-  <!-- Page content -->
-  <section class="section section-lg section-shaped ">
-    <div class="shape shape-style-2 shape-default">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="container pt-lg-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-5">
-          <div class="card bg-secondary shadow border-0">
-            
-            <div class="card-body px-lg-5 py-lg-5">
-               
-			   
-			   
-			   	
-	<div class="col-12 form-card">
 	
+    <!-- End Navbar -->
+    <div class="wrapper">
+
+
+      <header class="jumbotron bg-gradient-warning">
+        <div class="container">
+          <div class="row row-header">
+            <div class="col-12 col-sm-6">
+              <h1>xSpark-LifeShare</h1>
+              <p class="text-white">
+                We are proud that we are life givers to the people who are need
+                in blood!
+              </p>
+              <div class="cg">
+                <div class="card card-body bg-gradient-info">
+				
+				
+                  <blockquote cite="blockquote">
+                    <h6 class="mb-0 text-dark">
+                      <em><b>A drop for you, an ocean for someone else.</b></em>
+                    </h6>
+                    <br />
+
+                    <footer class="blockquote-footer vg text-dark">
+                      A Noble Being
+                    </footer>
+                  </blockquote>
+				  
+				  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-3 offset-sm-2 align-self-center">
+              <img src="blood.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </header>
+<!-- ======================================================================================================================================== -->
+	 <div class="section features-6 text-dark bg-white" id="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+              <span class="badge badge-primary badge-pill mb-3">user</span>
+              <h3 class="display-3">Thank You For Logging in</h3>
+              <h5 class="">Please Register Yourself for Blood Donation.</h5>
+            </div>
+          </div>
+          <div class="row align-items-center">
+		  
+            <div class="col-lg-6">
+             <div class="card bg-gradient-success shadow border-0">
+            
+            <div class="card-body">              		   				   	
+	<div class="col-12 form-card ">
 		<div>
-			<h3>Profile Detail</h3>
+			<h3 class="text-center text-dark font-weight-bold"><%= name %>'s Profile</h3>
 		</div>
 		<div>
 			<center>
-				<table class="table table-hover text-center">
+				<table class="table table-hover text-center text-dark font-weight-bold">
 					<tr>
-						<td>Name </td>
+						<td>Name: </td>
 						<td><%= name %></td>
 					</tr>
 					<tr>
-						<td>Email </td>
+						<td>Email: </td>
 						<td><%= email %></td>
 					</tr>
 					
 				</table>
 			</center>
-		</div>
-		<div class="abc" id="LangTable">
-			<a href="/logout">Logout</a>
-		</div>
-	</div>
-			   
-			   
-			   
 		
+		</div>
+		
+	</div>			   			   			  	
             </div>
           </div>
-
+            </div>
+			
+            <div class="col-lg-6 col-10 mx-md-auto d-none d-md-block">
+              <img class="ml-lg-5" src="pic1.png" width="100%" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-</div>
-	
-	
-	
-	
-	
 
       <!-- ======================================================================================================================================== -->
 
@@ -334,6 +360,185 @@
       <!-- ======================================================================================================================================== -->
     </div>
 
+  <!-- Registration Modal -->
+
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Register here for Blood Donation</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body bg-gradient-info">
+            <form
+              class="col s12 l5 white-text"
+              action="/register"
+              method="POST"
+              autocomplete="new-password"
+            >
+              <div class="form-group row">
+                <label
+                  for="firstname"
+                  class="col-md-2 col-form-label text-white"
+                  >Full Name</label
+                >
+                <div class="col-md-10">
+                  <input
+                    autocomplete="new-password"
+                    class="form-control"
+                    required
+                    placeholder="Name"
+                    id="first_name"
+                    name="name"
+                    type="text"
+                    class="validate"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label
+                  for="firstname"
+                  class="col-md-2 col-form-label text-white"
+                  for="blood"
+                  >Blood Group</label
+                >
+                <div class="col-md-10">
+                  <select
+                    name="blood"
+                    id="blood"
+                    class="validate form-control"
+                    required
+                  >
+                    <option value="">Select</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="O">O</option>
+                    <option value="AB">AB</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label
+                  for="firstname"
+                  class="col-md-2 col-form-label text-white"
+                  for="rh"
+                  >RH Factor</label
+                >
+                <div class="col-3">
+                  <label>
+                    <input
+                      class="form-control"
+                      value="+"
+                      name="rh"
+                      type="radio"
+                      required
+                    />
+                    <span class="text-white">Positive</span>
+                  </label>
+                </div>
+
+                <div class="col-3">
+                  <label>
+                    <input
+                      class="form-control"
+                      value="-"
+                      name="rh"
+                      type="radio"
+                      required
+                    />
+                    <span class="text-white">Negetive</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label text-white">Phone</label>
+                <div class="col-md-10">
+                  <input
+                    autocomplete="new-password"
+                    class="white-text form-control"
+                    required
+                    placeholder="Contact Number"
+                    id="phone"
+                    name="phone"
+                    type="text"
+                    pattern="[6789][0-9]{9}"
+                    class="validate"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label text-white" for="email"
+                  >Email</label
+                >
+                <div class="col-md-10">
+                  <input
+                    autocomplete="new-password"
+                    class="white-text validate form-control"
+                    placeholder="Email Address"
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="validate"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label text-white" for="city"
+                  >District</label
+                >
+                <div class="col-md-10">
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    class="validate form-control"
+                    required
+                    placeholder="District "
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="address" class="col-md-2 col-form-label text-white"
+                  >Address</label
+                >
+                <div class="col-md-10">
+                  <textarea
+                    autocomplete="new-password"
+                    maxlength="80"
+                    id="address"
+                    placeholder="Enter your Address"
+                    name="address"
+                    class="
+                      materialize-textarea
+                      white-text
+                      validate
+                      form-control
+                    "
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="offset-md-2 col-md-10">
+                  <button class="btn btn-success form-control" type="submit">
+                    Register
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Core -->
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
