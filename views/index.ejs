@@ -51,58 +51,101 @@
       });
     </script>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.weglot.com/weglot.min.js"
+    ></script>
+    <script>
+      Weglot.initialize({
+        api_key: "wg_b315629468470fd1230c5a1bec6c00575",
+      });
+    </script>
 
-	  <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-		<script>
-			Weglot.initialize({
-				api_key: 'wg_b315629468470fd1230c5a1bec6c00575'
-			});
-		</script>
-		
-		<!-- Customerly Live Chat Snippet Code -->
-<script>
-     !function(){var e=window,i=document,t="customerly",n="queue",o="load",r="settings",u=e[t]=e[t]||[];if(u.t){return void u.i("[customerly] SDK already initialized. Snippet included twice.")}u.t=!0;u.loaded=!1;u.o=["event","attribute","update","show","hide","open","close"];u[n]=[];u.i=function(t){e.console&&!u.debug&&console.error&&console.error(t)};u.u=function(e){return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(e),u[n].push(t),u}};u[o]=function(t){u[r]=t||{};if(u.loaded){return void u.i("[customerly] SDK already loaded. Use customerly.update to change settings.")}u.loaded=!0;var e=i.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://messenger.customerly.io/launcher.js";var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};u.o.forEach(function(t){u[t]=u.u(t)})}();
-    
-     customerly.load({
-           "app_id": "96549d39"
-     });
-</script>
-<!-- End of Customerly Live Chat Snippet Code -->
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	
-	<script type="text/javascript">
-		$(document).ready( () => {
+    <!-- Customerly Live Chat Snippet Code -->
+    <script>
+      !(function () {
+        var e = window,
+          i = document,
+          t = "customerly",
+          n = "queue",
+          o = "load",
+          r = "settings",
+          u = (e[t] = e[t] || []);
+        if (u.t) {
+          return void u.i(
+            "[customerly] SDK already initialized. Snippet included twice."
+          );
+        }
+        u.t = !0;
+        u.loaded = !1;
+        u.o = ["event", "attribute", "update", "show", "hide", "open", "close"];
+        u[n] = [];
+        u.i = function (t) {
+          e.console && !u.debug && console.error && console.error(t);
+        };
+        u.u = function (e) {
+          return function () {
+            var t = Array.prototype.slice.call(arguments);
+            return t.unshift(e), u[n].push(t), u;
+          };
+        };
+        u[o] = function (t) {
+          u[r] = t || {};
+          if (u.loaded) {
+            return void u.i(
+              "[customerly] SDK already loaded. Use customerly.update to change settings."
+            );
+          }
+          u.loaded = !0;
+          var e = i.createElement("script");
+          (e.type = "text/javascript"),
+            (e.async = !0),
+            (e.src = "https://messenger.customerly.io/launcher.js");
+          var n = i.getElementsByTagName("script")[0];
+          n.parentNode.insertBefore(e, n);
+        };
+        u.o.forEach(function (t) {
+          u[t] = u.u(t);
+        });
+      })();
 
-			$( "#form1" ).submit( (event) => {
-				event.preventDefault();
+      customerly.load({
+        app_id: "96549d39",
+      });
+    </script>
+    <!-- End of Customerly Live Chat Snippet Code -->
 
-				$.ajax({
-					type: 'POST',
-					url: '/',
-					data: $('#form1').serialize(),
-					dataType: "json",
-					success: (response) => {
-						//alert("a");
-						//console.log(response.Success);
-						$('#form1')[0].reset();
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-						document.getElementById("check").innerHTML=response.Success;
-         					//ADD THIS CODE
-         					setTimeout( () => {
-         						document.getElementById("check").innerHTML="";
-         					},3000);
-         					if (response.Success=="You are regestered,You can login now.") {
-         						document.getElementById("aa").click();
-         					};
-         				},
-         				error: () => {
-         				}
-         			})
-			});
-		});
-	</script>
+    <script type="text/javascript">
+      $(document).ready(() => {
+        $("#form1").submit((event) => {
+          event.preventDefault();
+
+          $.ajax({
+            type: "POST",
+            url: "/",
+            data: $("#form1").serialize(),
+            dataType: "json",
+            success: (response) => {
+              //alert("a");
+              //console.log(response.Success);
+              $("#form1")[0].reset();
+
+              document.getElementById("check").innerHTML = response.Success;
+              //ADD THIS CODE
+              setTimeout(() => {
+                document.getElementById("check").innerHTML = "";
+              }, 3000);
+              if (response.Success == "You are regestered,You can login now.") {
+                document.getElementById("aa").click();
+              }
+            },
+            error: () => {},
+          });
+        });
+      });
+    </script>
     <link href="footer.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="creativetim.min.css" type="text/css" />
@@ -169,8 +212,6 @@
           </div>
 
           <ul class="navbar-nav align-items-lg-center ml-auto">
-
-
             <li class="nav-item">
               <a href="/guidelines" class="nav-link">
                 <span class="text-white nav-link-inner--text"
@@ -202,23 +243,21 @@
                 >
               </a>
             </li>
-				  
-          <li class="navbar-tex text-white">
-            <a data-toggle="modal" data-target="#signup">
-              <i class="fas fa-solid fa-user-plus"> </i> Sign Up
-            </a>
-          </li>
-		  
-		  <li class="nav-item">
+
+            <li class="navbar-tex text-white">
+              <a data-toggle="modal" data-target="#signup">
+                <i class="fas fa-solid fa-user-plus"> </i> Sign Up
+              </a>
+            </li>
+
+            <li class="nav-item">
               <a href="/login" class="nav-link">
                 <span class="text-white nav-link-inner--text"
                   ><i class="text-white fas fa-sign-in-alt"></i> Login</span
                 >
               </a>
             </li>
-			
-		    </ul>
-		  
+          </ul>
         </div>
       </div>
     </nav>
@@ -261,8 +300,7 @@
         </div>
       </header>
 
-	    
-	 <!-- ======================================================================================================================================== -->
+      <!-- ======================================================================================================================================== -->
       <div class="section features-6 text-dark bg-white" id="services">
         <div class="container">
           <div class="row">
@@ -319,7 +357,7 @@
                 >
                   <i class="fad fa-cube"> </i>
                 </div>
-                <h3 class="display-3 ">Features</h3>
+                <h3 class="display-3">Features</h3>
                 <p class="text-justify">
                   Simplifies and automates the process of searching for blood in
                   case of emergency and maintain the records of the Blood
@@ -374,6 +412,18 @@
                       </div>
                       <div>
                         <h6 class="mb-0">Easy Access.</h6>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="d-flex align-items-center">
+                      <div>
+                        <div class="badge badge-circle badge-primary mr-3">
+                          <i class="ni ni-satisfied"> </i>
+                        </div>
+                      </div>
+                      <div>
+                        <h6 class="mb-0">Safe and Secure.</h6>
                       </div>
                     </div>
                   </li>
@@ -697,8 +747,8 @@
     </div>
 
     <!-- MODALS HERE -->
-	
-	<div id="signup" class="modal fade" role="dialog">
+
+    <div id="signup" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <div class="modal-content">
           <div class="modal-header">
@@ -708,28 +758,48 @@
             </button>
           </div>
           <div class="modal-body bg-gradient-info">
-		  
+            <div class="form-group">
+              <form id="form1" method="post">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required=""
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  class="form-control"
+                /><br />
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                  required=""
+                  class="form-control"
+                /><br />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required=""
+                  class="form-control"
+                /><br />
+                <input
+                  type="password"
+                  name="passwordConf"
+                  placeholder="Confirm Password"
+                  required=""
+                  class="form-control"
+                /><br />
+                <input type="submit" value="Register" class="btn btn-success" />
+              </form>
+            </div>
 
-		<div class="form-group">
-			<form id="form1" method="post">
-				<input type="email" name="email" placeholder="E-mail" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control"><br/>
-				<input type="text" name="username" placeholder="Username" required="" class="form-control"><br/>
-				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
-				<input type="password" name="passwordConf" placeholder="Confirm Password" required="" class="form-control"><br/>
-				<input type="submit" value="Register" class="btn btn-success">
-			</form>
-		</div>
-		
-		<div class="mssg bg-danger">
-			<span id="check"></span>
-		</div>
-		<div>
-			<span>Already Registered! <a href="/login">Login</a></span>
-		</div>
-		<div id="LangTable"><a href="/login" id="aa"></a>
-		</div>
-	
-			
+            <div class="mssg bg-danger">
+              <span id="check"></span>
+            </div>
+            <div>
+              <span>Already Registered! <a href="/login">Login</a></span>
+            </div>
+            <div id="LangTable"><a href="/login" id="aa"></a></div>
           </div>
         </div>
       </div>
