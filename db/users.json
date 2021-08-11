@@ -1,0 +1,137 @@
+[{
+  "_id": {
+    "$oid": "60e949a4bccc9c258cd99bcd"
+  },
+  "email": "ab007shetty@gmail.com",
+  "name": "ANIRUDHA B SHETTY",
+  "bloodGroup": "O+",
+  "city": "UDUPI",
+  "phone": "8150071512",
+  "address": "Bennekuduru, via Barkur",
+  "createdAt": {
+    "$date": "2021-07-10T07:17:56.725Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-10T07:17:56.725Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e94ebb7764564708957390"
+  },
+  "email": "vaishnavid0604@gmail.com",
+  "name": "VAISHNAVI D",
+  "bloodGroup": "A+",
+  "city": "UDUPI",
+  "phone": "7483123330",
+  "address": "Kalmady, Udupi",
+  "createdAt": {
+    "$date": "2021-07-10T07:39:39.684Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-10T07:39:39.684Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e94f5a7764564708957394"
+  },
+  "email": "vaishnavivbhat30@gmail.com",
+  "name": "VAISHNAVI V BHAT",
+  "bloodGroup": "A+",
+  "city": "UDUPI",
+  "phone": "6363503274",
+  "address": "Ambagilu, Udupi",
+  "createdAt": {
+    "$date": "2021-07-10T07:42:18.825Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-10T07:42:18.825Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e951aeb0131e55e0612534"
+  },
+  "email": "vikramthunga2001@gmail.com",
+  "name": "VIKRAM GT",
+  "bloodGroup": "A+",
+  "city": "DAKSHINA KANNADA",
+  "phone": "8088528713",
+  "address": "Surathkal",
+  "createdAt": {
+    "$date": "2021-07-10T07:52:14.946Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-10T07:52:14.946Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e96c1d776456470895739e"
+  },
+  "email": "jeevanrebeiro@gmail.com",
+  "name": "JEEVAN REBEIRO",
+  "bloodGroup": "B+",
+  "city": "UDUPI",
+  "phone": "9611716270",
+  "address": "Hemmadi, Kundapura",
+  "createdAt": {
+    "$date": "2021-07-10T09:45:01.899Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-10T09:45:01.899Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e9815377645647089573bc"
+  },
+  "email": "raj001@gmail.com",
+  "name": "RAJ",
+  "bloodGroup": "O+",
+  "city": "UDUPI",
+  "phone": "9480016116",
+  "address": "Malpe, Udupi",
+  "createdAt": {
+    "$date": "2021-07-10T11:15:31.444Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-10T11:15:31.444Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60e9a4eeef0edd42ccec54a2"
+  },
+  "email": "adithi@gmail.com",
+  "name": "ADITHI",
+  "bloodGroup": "A+",
+  "city": "UDUPI",
+  "phone": "9480792656",
+  "address": "bhramhavar, Udupi",
+  "createdAt": {
+    "$date": "2021-07-10T13:47:26.377Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-10T13:47:26.377Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ea777de7057209c03250b4"
+  },
+  "email": "",
+  "name": "BALACHANDRA",
+  "bloodGroup": "O+",
+  "city": "UDUPI",
+  "phone": "9880779789",
+  "address": "bennekudru",
+  "createdAt": {
+    "$date": "2021-07-11T04:45:49.654Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-11T04:45:49.654Z"
+  },
+  "__v": 0
+}]
