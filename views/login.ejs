@@ -1,109 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" type="image/png" href="blood.png" />
-    <title>Life Share</title>
 
-    <!--     Fonts and icons     -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/png" href="blood.png" />
+  <title>Life Share</title>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+  <!--     Fonts and icons     -->
 
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <link
-      rel="stylesheet"
-      href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css "
-    />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
-      rel="stylesheet"
-    />
-    <link
-      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
-      rel="stylesheet"
-    />
-	
-	    <!--     Weglot     -->
+  <link rel="stylesheet"
+    href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css " />
 
-	  <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-		<script>
-			Weglot.initialize({
-				api_key: 'wg_b315629468470fd1230c5a1bec6c00575'
-			});
-		</script>
-		
-		<!-- Customerly Live Chat Snippet Code -->
-<script>
-     !function(){var e=window,i=document,t="customerly",n="queue",o="load",r="settings",u=e[t]=e[t]||[];if(u.t){return void u.i("[customerly] SDK already initialized. Snippet included twice.")}u.t=!0;u.loaded=!1;u.o=["event","attribute","update","show","hide","open","close"];u[n]=[];u.i=function(t){e.console&&!u.debug&&console.error&&console.error(t)};u.u=function(e){return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(e),u[n].push(t),u}};u[o]=function(t){u[r]=t||{};if(u.loaded){return void u.i("[customerly] SDK already loaded. Use customerly.update to change settings.")}u.loaded=!0;var e=i.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://messenger.customerly.io/launcher.js";var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};u.o.forEach(function(t){u[t]=u.u(t)})}();
-    
-     customerly.load({
-           "app_id": "96549d39"
-     });
-</script>
-<!-- End of Customerly Live Chat Snippet Code -->
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	
-	<script type="text/javascript">
-		$(document).ready( () => {
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
 
-			$( "#form" ).submit( (event) => {
-				event.preventDefault();
+  <!--     Weglot     -->
 
-				$.ajax({
-					type: 'POST',
-					url: '/login',
-					data: $('#form').serialize(),
-					dataType: "json",
-					success: (response) => {
-						//alert("a");
-						//console.log(response.Success);
-						$('#form')[0].reset();
+  <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+  <script>
+    Weglot.initialize({
+      api_key: 'wg_b315629468470fd1230c5a1bec6c00575'
+    });
+  </script>
 
-						document.getElementById("check").innerHTML=response.Success;
-         					//ADD THIS CODE
-         					setTimeout( () => {
-         						document.getElementById("check").innerHTML="";
-         					},3000);
-         					if (response.Success=="Success!") {
-         						document.getElementById("aa").click();
-         					};
-         				},
-         				error: () => {
-         				}
-         			})
-			});
+  <!-- Customerly Live Chat Snippet Code -->
+  <script>
+    !function () { var e = window, i = document, t = "customerly", n = "queue", o = "load", r = "settings", u = e[t] = e[t] || []; if (u.t) { return void u.i("[customerly] SDK already initialized. Snippet included twice.") } u.t = !0; u.loaded = !1; u.o = ["event", "attribute", "update", "show", "hide", "open", "close"]; u[n] = []; u.i = function (t) { e.console && !u.debug && console.error && console.error(t) }; u.u = function (e) { return function () { var t = Array.prototype.slice.call(arguments); return t.unshift(e), u[n].push(t), u } }; u[o] = function (t) { u[r] = t || {}; if (u.loaded) { return void u.i("[customerly] SDK already loaded. Use customerly.update to change settings.") } u.loaded = !0; var e = i.createElement("script"); e.type = "text/javascript", e.async = !0, e.src = "https://messenger.customerly.io/launcher.js"; var n = i.getElementsByTagName("script")[0]; n.parentNode.insertBefore(e, n) }; u.o.forEach(function (t) { u[t] = u.u(t) }) }();
 
-		});
-	</script>
-	
-    <link href="footer.css" rel="stylesheet" />
+    customerly.load({
+      "app_id": "96549d39"
+    });
+  </script>
+  <!-- End of Customerly Live Chat Snippet Code -->
 
-    <link rel="stylesheet" href="creativetim.min.css" type="text/css" />
-  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
 
-  <body class="bg-white" id="top">
-    <!-- Navbar -->
-    <nav
-      id="navbar-main"
-      class="
+  <script type="text/javascript">
+    $(document).ready(() => {
+
+      $("#form").submit((event) => {
+        event.preventDefault();
+
+        $.ajax({
+          type: 'POST',
+          url: '/login',
+          data: $('#form').serialize(),
+          dataType: "json",
+          success: (response) => {
+            //alert("a");
+            //console.log(response.Success);
+            $('#form')[0].reset();
+
+            document.getElementById("check").innerHTML = response.Success;
+            //ADD THIS CODE
+            setTimeout(() => {
+              document.getElementById("check").innerHTML = "";
+            }, 3000);
+            if (response.Success == "Success!") {
+              document.getElementById("aa").click();
+            };
+          },
+          error: () => {
+          }
+        })
+      });
+
+    });
+  </script>
+
+  <link href="footer.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="creativetim.min.css" type="text/css" />
+</head>
+
+<body class="bg-white" id="top">
+  <!-- Navbar -->
+  <nav id="navbar-main" class="
         navbar navbar-main navbar-expand-lg
         bg-default
         navbar-light
@@ -111,280 +91,226 @@
         top-0
         shadow
         py-0
-      "
-    >
-      <div class="container">
-        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-          <li class="nav-item dropdown">
-            <a href="/" class="navbar-brand mr-lg-5">
-              <img class="img img-fluid img-responsive" src="blood.png" />
-              <img class="img img-fluid img-responsive" src="nav.png" />
+      ">
+    <div class="container">
+      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a href="/" class="navbar-brand mr-lg-5">
+            <img class="img img-fluid img-responsive" src="blood.png" />
+            <img class="img img-fluid img-responsive" src="nav.png" />
+          </a>
+        </li>
+      </ul>
+
+      <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbar_global"
+        aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="navbar-collapse collapse bg-default" id="navbar_global">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-10 collapse-brand">
+              <a href="/">
+                <img src="nav.png" />
+              </a>
+            </div>
+            <div class="col-2 collapse-close bg-danger">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global"
+                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <ul class="navbar-nav align-items-lg-center ml-auto">
+
+
+          <li class="nav-item">
+            <a href="/guidelines" class="nav-link">
+              <span class="text-white nav-link-inner--text"><i class="text-white fas fa-heart"></i> Guidelines</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/faq" class="nav-link">
+              <span class="text-white nav-link-inner--text"><i class="text-white fas fa-question"></i> FAQ's</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/center" class="nav-link">
+              <span class="text-white nav-link-inner--text"><i class="text-white fas fa-hospital"></i> Centres</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/contact" class="nav-link">
+              <span class="text-white nav-link-inner--text"><i class="text-white fas fa-address-card"></i>
+                Contact</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/login" class="nav-link">
+              <span class="text-white nav-link-inner--text"><i class="text-white fas fa-sign-in-alt"></i> Login</span>
             </a>
           </li>
         </ul>
 
-        <button
-          class="navbar-toggler bg-white"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbar_global"
-          aria-controls="navbar_global"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon text-white"></span>
-        </button>
-        <div class="navbar-collapse collapse bg-default" id="navbar_global">
-          <div class="navbar-collapse-header">
-            <div class="row">
-              <div class="col-10 collapse-brand">
-                <a href="/">
-                  <img src="nav.png" />
-                </a>
-              </div>
-              <div class="col-2 collapse-close bg-danger">
-                <button
-                  type="button"
-                  class="navbar-toggler"
-                  data-toggle="collapse"
-                  data-target="#navbar_global"
-                  aria-controls="navbar_global"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span></span>
-                  <span></span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <ul class="navbar-nav align-items-lg-center ml-auto">
-
-
-            <li class="nav-item">
-              <a href="/guidelines" class="nav-link">
-                <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-heart"></i> Guidelines</span
-                >
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/faq" class="nav-link">
-                <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-question"></i> FAQ's</span
-                >
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/center" class="nav-link">
-                <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-hospital"></i> Centres</span
-                >
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/contact" class="nav-link">
-                <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-address-card"></i> Contact</span
-                >
-              </a>
-            </li>
-			
-			<li class="nav-item">
-              <a href="/login" class="nav-link">
-                <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-sign-in-alt"></i> Login</span
-                >
-              </a>
-            </li>
-          </ul>
-		  
-        </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
-
-    <div class="wrapper ">
-     
-
-	<!-- ======================================================================================================================================== -->
-	  
-	  
-	    <!-- Login Form -->
-<div class="main-content">
-  <!-- Header -->
-  <!-- Page content -->
-  <section class="section section-lg section-shaped ">
-    <div class="shape shape-style-1 shape-default">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="container pt-lg-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-5">
-          <div class="card bg-secondary shadow border-0">
-            
-            <div class="card-body px-lg-5 py-lg-5">
-                 <div class="text-center text-muted mb-4">
-              <small> Sign in with credentials</small>
-    
-            </div>
-			
-          <div class="form-group ">
-		
-			<form id="form" method="post" >
-				<input type="text" name="email" placeholder="E-mail" required="" class="form-control"><br/>
-				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
-				<input type="submit" value="Login" class="btn btn-success">
-			</form>
-			
-		</div>
-		
-		<div class="mssg bg-danger">
-			<span id="check" ></span>
-		</div>
-		<div id="LangTable"><a href="/profile" id="aa"></a>
-		</div>
-		
-		
-            </div>
-          </div>
-
-        </div>
       </div>
     </div>
-  </section>
+  </nav>
+  <!-- End Navbar -->
 
-</div>
-	
-
-      <!-- ======================================================================================================================================== -->
-
-      <footer class="footer" id="bottom">
+  <div class="wrapper ">
 
 
-        <div class="container">
-          <div class="row row-grid align-items-center mb-5">
-            <div class="col-lg-6">
-              <h3 class="text-primary font-weight-light mb-2">
-                Thank you for Donating Blood!
-              </h3>
-              <h4 class="mb-0 font-weight-light">
-                Let's get in touch on any of these platforms.
-              </h4>
-            </div>
-            <div class="col-lg-4 text-lg-right btn-wrapper social-network">
-              <span>
-                <a
-                  href="mailto:eattendance1999@gmail.com?subject=EAttendance"
-                  data-toggle="tooltip"
-                  data-original-title="Mail Us"
-                  ><i class="fa-lg fas fa-envelope"></i
-                ></a>
-              </span>
-              <span>
-                <a
-                  href="https://twitter.com/"
-                  target="blank"
-                  data-toggle="tooltip"
-                  data-original-title="Follow Us"
-                  ><i class="fa-lg fab fa-twitter"></i
-                ></a>
-              </span>
-              <span>
-                <a
-                  href="https://www.linkedin.com/"
-                  target="blank"
-                  data-toggle="tooltip"
-                  data-original-title="Follow Us"
-                  ><i class="fa-lg fab fa-linkedin"></i
-                ></a>
-              </span>
-              <span>
-                <a
-                  href="https://www.instagram.com/"
-                  target="blank"
-                  data-toggle="tooltip"
-                  data-original-title="Like Us"
-                  ><i class="fa-lg fab fa-instagram"></i
-                ></a>
-              </span>
-              <span>
-                <a
-                  href="https://github.com/ab007shetty/"
-                  target="blank"
-                  data-toggle="tooltip"
-                  data-original-title="Star on Github"
-                  ><i class="fa-lg fab fa-github"></i
-                ></a>
-              </span>
-            </div>
-            <div class="col-lg-2 d-none d-lg-block">
-              <a href="">
-                <img
-                  class="img img-fluid img-responsive"
-                  width="100%"
-                  src="play.png"
-                />
-              </a>
-            </div>
-          </div>
-          <hr />
-          <div class="row align-items-center justify-content-md-between">
-            <div class="col-md-6">
-              <div class="copyright">
-                &copy; 2021 <a href="/" target="_blank">BLOOD BANK</a>
+    <!-- ======================================================================================================================================== -->
+
+
+    <!-- Login Form -->
+    <div class="main-content">
+      <!-- Header -->
+      <!-- Page content -->
+      <section class="section section-lg section-shaped ">
+        <div class="shape shape-style-1 shape-default">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="container pt-lg-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-5">
+              <div class="card bg-secondary shadow border-0">
+
+                <div class="card-body px-lg-5 py-lg-5">
+                  <div class="text-center text-muted mb-4">
+                    <small> Sign in with credentials</small>
+
+                  </div>
+
+                  <div class="form-group ">
+
+                    <form id="form" method="post">
+                      <input type="text" name="email" placeholder="E-mail" required="" class="form-control"><br />
+                      <input type="password" name="password" placeholder="Password" required=""
+                        class="form-control"><br />
+                      <input type="submit" value="Login" class="btn btn-success">
+                    </form>
+
+                  </div>
+
+                  <div class="mssg bg-danger">
+                    <span id="check"></span>
+                  </div>
+                  <div id="LangTable"><a href="/profile" id="aa"></a>
+                  </div>
+
+
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <ul class="nav nav-footer justify-content-end">
-                <li class="nav-item">
-                  <a href="/" class="nav-link">BLOOD BANK</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/faq" class="nav-link">FAQ</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/bank" class="nav-link">Donar List</a>
-                </li>
-              </ul>
+
             </div>
           </div>
         </div>
+      </section>
 
-      </footer>
-
-      <!-- ======================================================================================================================================== -->
     </div>
 
 
-    <!-- Core -->
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <!-- ======================================================================================================================================== -->
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
+    <footer class="footer" id="bottom">
 
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="https://use.fontawesome.com/ee1c3da296.js"></script>
-  </body>
+      <div class="container">
+        <div class="row row-grid align-items-center mb-5">
+          <div class="col-lg-6">
+            <h3 class="text-primary font-weight-light mb-2">
+              Thank you for Donating Blood!
+            </h3>
+            <h4 class="mb-0 font-weight-light">
+              Let's get in touch on any of these platforms.
+            </h4>
+          </div>
+          <div class="col-lg-4 text-lg-right btn-wrapper social-network">
+            <span>
+              <a href="mailto:eattendance1999@gmail.com?subject=EAttendance" data-toggle="tooltip"
+                data-original-title="Mail Us"><i class="fa-lg fas fa-envelope"></i></a>
+            </span>
+            <span>
+              <a href="https://twitter.com/" target="blank" data-toggle="tooltip" data-original-title="Follow Us"><i
+                  class="fa-lg fab fa-twitter"></i></a>
+            </span>
+            <span>
+              <a href="https://www.linkedin.com/" target="blank" data-toggle="tooltip"
+                data-original-title="Follow Us"><i class="fa-lg fab fa-linkedin"></i></a>
+            </span>
+            <span>
+              <a href="https://www.instagram.com/" target="blank" data-toggle="tooltip" data-original-title="Like Us"><i
+                  class="fa-lg fab fa-instagram"></i></a>
+            </span>
+            <span>
+              <a href="https://github.com/ab007shetty/" target="blank" data-toggle="tooltip"
+                data-original-title="Star on Github"><i class="fa-lg fab fa-github"></i></a>
+            </span>
+          </div>
+          <div class="col-lg-2 d-none d-lg-block">
+            <a href="">
+              <img class="img img-fluid img-responsive" width="100%" src="play.png" />
+            </a>
+          </div>
+        </div>
+        <hr />
+        <div class="row align-items-center justify-content-md-between">
+          <div class="col-md-6">
+            <div class="copyright">
+              &copy; 2021 <a href="/" target="_blank">BLOOD BANK</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul class="nav nav-footer justify-content-end">
+              <li class="nav-item">
+                <a href="/" class="nav-link">BLOOD BANK</a>
+              </li>
+              <li class="nav-item">
+                <a href="/faq" class="nav-link">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a href="/contact" class="nav-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+    <!-- ======================================================================================================================================== -->
+  </div>
+
+
+  <!-- Core -->
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://use.fontawesome.com/ee1c3da296.js"></script>
+</body>
+
 </html>
